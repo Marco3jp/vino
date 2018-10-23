@@ -1,4 +1,4 @@
-class controller {
+export default class controller {
     /**
      *
      * @param {view} view

@@ -1,4 +1,4 @@
-class methods {
+export default class methods {
     /**
      *
      * @param {optionType} options
