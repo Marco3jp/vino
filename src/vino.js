@@ -5,21 +5,30 @@ class vino {
      * @param {Object} userOptions
      */
     constructor(mount, userOptions) {
+        /**
+         *
+         * @type {optionType}
+         */
         this.options = new optionType();
-        this.private = new privateType();
+        /**
+         *
+         * @type {privateType}
+         * @private {privateType}
+         */
+        this._private = new privateType();
         /**
          * プライベートな状態を外から見るためのObjectです
          * @type {{character: (function(): number), sentence: (function(): number), section: (function(): number)}}
          */
         this.state = {
             character: function () {
-                return this.private.position.character;
+                return this._private.position.character;
             },
             sentence: function () {
-                return this.private.position.sentence;
+                return this._private.position.sentence;
             },
             section: function () {
-                return this.private.position.section;
+                return this._private.position.section;
             }
         };
 
@@ -31,6 +40,6 @@ class vino {
             }
         }
 
-        this.methods = new methods(this.options, this.private);
+        this.methods = new methods(this.options, this._private);
     }
 }
