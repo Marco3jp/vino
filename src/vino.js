@@ -36,7 +36,7 @@ export default class vino {
             }
         };
 
-        for (option in userOptions) {
+        for (let option in userOptions) {
             if (this.options[option] !== undefined) {
                 this.options[option] = userOptions[option];
             } else {
