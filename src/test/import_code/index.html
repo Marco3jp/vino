@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>import code</title>
+</head>
+<body>
+<script type="module">
+    import vino from "../../vino.js"
+
+    let client = new vino("app", {});
+    console.log(client);
+    console.log(client.state.sentence);
+    console.log(client.state.section);
+    console.log(client.state.character);
+</script>
+</body>
+</html>
