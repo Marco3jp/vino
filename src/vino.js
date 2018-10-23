@@ -45,6 +45,6 @@ export default class vino {
         }
 
         this.methods = new methods(this.options, this._private);
-        console.log("%cHello World, %cVino.js", "font-size:20px", "font-size:20px;color:#2196F3;background-color:#BBDEFB;");
+        console.log("%cHello World, %cVino.js", "font-size:20px", "font-size:20px;color:#2196F3;background-color:#15FAE5;");
     }
 }
