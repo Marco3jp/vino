@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display_innerbox</title>
+    <style>
+        #app {
+            height: 600px;
+            width: 800px;
+            border: thin solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<script type="module">
+    import vino from "../../vino.js"
+
+    let client = new vino("app", {});
+</script>
+</body>
+</html>
