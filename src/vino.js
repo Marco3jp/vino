@@ -25,13 +25,25 @@ export default class vino {
          * @type {{character: (function(): number), sentence: (function(): number), section: (function(): number)}}
          */
         this.state = {
-            character: function () {
+            /**
+             *
+             * @returns {number}
+             */
+            get character() {
                 return this._private.position.character;
             },
-            sentence: function () {
+            /**
+             *
+             * @returns {number}
+             */
+            get sentence() {
                 return this._private.position.sentence;
             },
-            section: function () {
+            /**
+             *
+             * @returns {number}
+             */
+            get section() {
                 return this._private.position.section;
             }
         };
