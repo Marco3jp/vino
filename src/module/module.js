@@ -1,4 +1,4 @@
-class module {
+export default class module {
     /**
      *
      * @param {view} view

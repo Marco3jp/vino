@@ -1,4 +1,4 @@
-class view {
+export default class view {
     constructor() {
     }
 }

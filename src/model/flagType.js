@@ -1,4 +1,4 @@
-class flagType {
+export default class flagType {
     constructor() {
         this.endSentence = false;
         this.endSection = false;

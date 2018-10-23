@@ -1,4 +1,8 @@
-class methods {
+import view from "../view/view.js"
+import controller from "../controller/controller.js"
+import module from "../module/module.js"
+
+export default class methods {
     /**
      *
      * @param {optionType} options

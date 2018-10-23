@@ -1,10 +1,15 @@
-class vino {
+import optionType from "./model/optionType.js"
+import privateType from "./model/private.js"
+import methods from "./model/methods.js"
+
+export default class vino {
     /**
      *
      * @param {string} mount
      * @param {Object} userOptions
      */
     constructor(mount, userOptions) {
+        let self = this;
         /**
          *
          * @type {optionType}
@@ -21,18 +26,30 @@ class vino {
          * @type {{character: (function(): number), sentence: (function(): number), section: (function(): number)}}
          */
         this.state = {
-            character: function () {
-                return this._private.position.character;
+            /**
+             *
+             * @returns {number}
+             */
+            get character() {
+                return self._private.position.character;
             },
-            sentence: function () {
-                return this._private.position.sentence;
+            /**
+             *
+             * @returns {number}
+             */
+            get sentence() {
+                return self._private.position.sentence;
             },
-            section: function () {
-                return this._private.position.section;
+            /**
+             *
+             * @returns {number}
+             */
+            get section() {
+                return self._private.position.section;
             }
         };
 
-        for (option in userOptions) {
+        for (let option in userOptions) {
             if (this.options[option] !== undefined) {
                 this.options[option] = userOptions[option];
             } else {
@@ -41,5 +58,6 @@ class vino {
         }
 
         this.methods = new methods(this.options, this._private);
+        console.log("%cHello World, %cVino.js", "font-size:20px", "font-size:20px;color:#2196F3;background-color:#15FAE5;");
     }
 }
