@@ -9,6 +9,7 @@ export default class vino {
      * @param {Object} userOptions
      */
     constructor(mount, userOptions) {
+        let self = this;
         /**
          *
          * @type {optionType}
@@ -30,21 +31,21 @@ export default class vino {
              * @returns {number}
              */
             get character() {
-                return this._private.position.character;
+                return self._private.position.character;
             },
             /**
              *
              * @returns {number}
              */
             get sentence() {
-                return this._private.position.sentence;
+                return self._private.position.sentence;
             },
             /**
              *
              * @returns {number}
              */
             get section() {
-                return this._private.position.section;
+                return self._private.position.section;
             }
         };
 
