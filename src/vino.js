@@ -11,12 +11,12 @@ export default class vino {
     constructor(mount, userOptions) {
         let self = this;
         /**
-         *
+         * 様々な設定類を格納するオブジェクト
          * @type {optionType}
          */
         this.options = new optionType();
         /**
-         *
+         * 外から変更してほしくない値を格納するオブジェクト
          * @type {privateType}
          * @private {privateType}
          */
@@ -27,21 +27,21 @@ export default class vino {
          */
         this.state = {
             /**
-             *
+             * 何文字目にいるかを受け取るゲッター
              * @returns {number}
              */
             get character() {
                 return self._private.position.character;
             },
             /**
-             *
+             * 何文目にいるかを受け取るゲッター
              * @returns {number}
              */
             get sentence() {
                 return self._private.position.sentence;
             },
             /**
-             *
+             * 何セクション目にいるか受け取るゲッター
              * @returns {number}
              */
             get section() {
@@ -49,6 +49,7 @@ export default class vino {
             }
         };
 
+        // initModule内に移動するか検討中
         for (let option in userOptions) {
             if (this.options[option] !== undefined) {
                 this.options[option] = userOptions[option];
