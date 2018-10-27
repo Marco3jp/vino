@@ -6,9 +6,10 @@ export default class vino {
     /**
      *
      * @param {string} mount
+     * @param {storyScriptType} storyScript
      * @param {Object} userOptions
      */
-    constructor(mount, userOptions) {
+    constructor(mount, storyScript, userOptions) {
         let self = this;
         /**
          * 様々な設定類を格納するオブジェクト
@@ -62,4 +63,8 @@ export default class vino {
 
         initController.run(mount, this.options);
     }
+
+    addStoryScript(storyScript) {
+        this._private.storyScript.push(storyScript);
+    };
 }
