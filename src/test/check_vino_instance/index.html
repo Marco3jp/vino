@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>check vino instance</title>
+    <link href="../../libs/bootstrap-reboot.min.css" rel="stylesheet">
+    <style>
+        #app {
+            height: 600px;
+            width: 800px;
+            border: thin solid black;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div id="app"></div>
+<script type="module">
+    import vino from "../../vino.js"
+
+    let client = new vino("app", {
+        init: {
+            bgColor: "#9E9E9E",
+        },
+        script: ["hello everyone.", "this is test section", "bye"],
+    }, {});
+
+    console.log(client);
+</script>
 </body>
 </html>
