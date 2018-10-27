@@ -21,32 +21,34 @@ export default class vino {
          * @type {privateType}
          * @private {privateType}
          */
-        this._private = new privateType();
+        this._private = new privateType(storyScript);
         /**
          * プライベートな状態を外から見るためのObjectです
          * @type {{character: (function(): number), sentence: (function(): number), section: (function(): number)}}
          */
         this.state = {
-            /**
-             * 何文字目にいるかを受け取るゲッター
-             * @returns {number}
-             */
-            get character() {
-                return self._private.position.character;
-            },
-            /**
-             * 何文目にいるかを受け取るゲッター
-             * @returns {number}
-             */
-            get sentence() {
-                return self._private.position.sentence;
-            },
-            /**
-             * 何セクション目にいるか受け取るゲッター
-             * @returns {number}
-             */
-            get section() {
-                return self._private.position.section;
+            position: {
+                /**
+                 * 何文字目にいるかを受け取るゲッター
+                 * @returns {number}
+                 */
+                get character() {
+                    return self._private.position.character;
+                },
+                /**
+                 * 何文目にいるかを受け取るゲッター
+                 * @returns {number}
+                 */
+                get sentence() {
+                    return self._private.position.sentence;
+                },
+                /**
+                 * 何セクション目にいるか受け取るゲッター
+                 * @returns {number}
+                 */
+                get section() {
+                    return self._private.position.section;
+                }
             }
         };
 
